@@ -51,7 +51,7 @@ _main:
 	movk	X3, #0x7A2F, lsl#32
 	movk	X3, #0x6873, lsl#48
 	stp	X3, XZR, [SP,#-16]!	; push to stack
-	mov	X0, SP			; save pointer to  argv[0]
+	mov	X0, SP			; save pointer to argv[0]
 	stp	X0, XZR, [SP,#-16]!	; push argv[0] and terminating 0 to stack
 	mov	X1, SP			; move pointer to argument array into X1
 	mov	X2, XZR			; third argument for execve
